@@ -1,0 +1,68 @@
+/* Styling untuk container utama */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 100px;
+    background: linear-gradient(135deg, #000000, #434343);
+  }
+  
+  /* Styling untuk form register */
+  .register-form {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Styling input dan label */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #333;
+    color: #ffffff;
+  }
+  
+  /* Button styling */
+  .register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .register-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling heading */
+  h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ffffff;
+  }
+  
+  /* Efek transisi hover */
+  .input-group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    transition: 0.3s;
+  }
+  

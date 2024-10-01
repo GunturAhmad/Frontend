@@ -1,0 +1,38 @@
+.paket-container {
+    background-color: black;
+    padding: 40px 0;
+  }
+  
+  .paket-card {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .paket-card img {
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .paket-card .card-body {
+    padding: 20px;
+  }
+  
+  .paket-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .paket-card .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .col-lg-3, .col-md-4, .col-sm-6 {
+    margin-bottom: 30px;
+  }
+  
