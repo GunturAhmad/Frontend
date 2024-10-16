@@ -1,0 +1,58 @@
+.search-results-container {
+    padding: 20px;
+    background-color: rgb(255, 255, 255); /* Changed background color to black */
+    border-radius: 8px;
+}
+
+.search-results-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff; /* Change title color to white for contrast */
+}
+
+.result-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center the items */
+}
+
+.result-item {
+    border: 1px solid #444; /* Darker border for separation */
+    border-radius: 10px;
+    padding: 10px; /* Reduced padding */
+    margin: 10px; /* Margin around items */
+    background-color: #222; /* Darker background for items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
+    width: calc(25% - 20px); /* Set width to make columns smaller (4 columns per row) */
+}
+
+.result-item-image {
+    width: 100%; /* Make the image full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.result-item-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.result-item-description {
+    font-size: 1rem;
+    color: #ccc; /* Lighter gray color for description */
+}
+
+.result-item-price {
+    font-weight: bold;
+    color: #28a745; /* Bootstrap success color */
+}
+
+.no-results {
+    text-align: center; /* Center align no results message */
+    font-size: 1.2rem;
+    color: #dc3545; /* Bootstrap danger color */
+}

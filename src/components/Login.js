@@ -1,28 +1,30 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Tambahkan import untuk file CSS
+import './Login.css';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    // Simulasi panggilan API
-    const response = await fetch('URL_API_LOGIN', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    });
+  // Daftar akun yang valid
+  const validUsers = [
+    { username: 'admin', password: '12345678' },
+    { username: 'guntur', password: '123456789' },
+  ];
 
-    if (response.ok) {
-      // Redirect ke dashboard atau halaman lain
-      navigate('/dashboard');
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // Cek apakah username dan password cocok dengan salah satu akun di daftar validUsers
+    const isValidUser = validUsers.some(
+      (user) => user.username === username && user.password === password
+    );
+
+    if (isValidUser) {
+      navigate('/');
     } else {
-      alert('Login gagal');
+      alert('Login gagal. Username atau password salah.');
     }
   };
 
@@ -31,11 +33,11 @@ const Login = () => {
       <form className="login-form" onSubmit={handleLogin}>
         <h2>Login</h2>
         <div className="input-group">
-          <label>Usename:</label>
+          <label>Username:</label>
           <input
-            type="Username"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             placeholder="Enter your username"
           />
         </div>

@@ -1,38 +1,56 @@
 .paket-container {
-    background-color: black;
-    padding: 40px 0;
-  }
-  
+  background-color: #000; /* Keep the background black */
+  padding: 40px 0;
+}
+
+.paket-card {
+  background-color: #fff; /* Card background color */
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly heavier shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+}
+
+.paket-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.paket-card img {
+  height: 150px; /* Fixed height for images */
+  object-fit: cover; /* Cover the entire area */
+  border-bottom: 1px solid #ccc; /* Bottom border for image */
+}
+
+.paket-card .card-body {
+  padding: 20px; /* Padding inside the card body */
+}
+
+.paket-card .card-title {
+  font-size: 1.2rem; /* Title size */
+  font-weight: bold; /* Bold title */
+  margin-bottom: 10px; /* Space below title */
+  color: #333; /* Dark color for better contrast */
+}
+
+.paket-card .card-text {
+  font-size: 0.9rem; /* Description size */
+  margin-bottom: 10px; /* Space below description */
+  color: #666; /* Slightly lighter color for description */
+}
+
+.col-lg-3, .col-md-4, .col-sm-6 {
+  margin-bottom: 30px; /* Space below each column */
+}
+
+/* Media query for responsive adjustments */
+@media (max-width: 768px) {
   .paket-card {
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the cards on smaller screens */
   }
-  
+
   .paket-card img {
-    height: 150px;
-    object-fit: cover;
-    border-bottom: 1px solid #ccc;
+    height: 120px; /* Adjust image height for smaller screens */
   }
-  
-  .paket-card .card-body {
-    padding: 20px;
-  }
-  
-  .paket-card .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .paket-card .card-text {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  
-  .col-lg-3, .col-md-4, .col-sm-6 {
-    margin-bottom: 30px;
-  }
-  
+}

@@ -10,8 +10,6 @@ import SearchResults from './components/SearchResults';
 import BusSchedule from './components/BusSchedule';
 import CarSchedule from './components/CarSchedule';
 import DriverGuideProfile from './components/DriverGuideProfile';
-
-// Import komponen Login, Register, dan Dashboard
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';

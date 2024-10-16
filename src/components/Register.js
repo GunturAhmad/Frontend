@@ -1,22 +1,28 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
+
 const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleRegister = async (event) => {
+  const handleRegister = (event) => {
     event.preventDefault();
 
-    try {
-      const response = await axios.post('http://localhost:5000/api/register', {
-        username,
-        password,
-      });
-      alert(response.data.message);
-    } catch (error) {
-      console.error(error);
-      alert('Error during registration');
+    // Validasi panjang username dan password minimal 8 karakter
+    
+    if (password.length < 8) {
+      alert('Password harus memiliki minimal 8 karakter.');
+      return;
+    }
+
+    // Jika validasi berhasil, lanjutkan proses registrasi
+    if (username.trim() && password.trim()) {
+      alert('Registration successful!');
+      navigate('/login'); // Navigasi ke halaman Home setelah registrasi
+    } else {
+      alert('Please fill in both username and password.');
     }
   };
 
