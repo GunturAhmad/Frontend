@@ -21,9 +21,16 @@ const Login = () => {
       (user) => user.username === username && user.password === password
     );
 
-    if (isValidUser) {
+    // Percabangan kompleks berdasarkan username dan password
+    if (isValidUser && username === 'admin') {
+      alert('Selamat datang, Admin!');
       navigate('/');
-    } else {
+    } else if (isValidUser && username === 'guntur') {
+      alert('Selamat datang, Guntur!');
+      navigate('/');
+    } else if (username && password.length < 8) {
+      alert('Password terlalu pendek. Coba lagi.');
+    } else if (!isValidUser) {
       alert('Login gagal. Username atau password salah.');
     }
   };
